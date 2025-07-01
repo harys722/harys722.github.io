@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- HTML Meta Tags -->
+    <title>Preparing Your Journey...</title>
+    <meta name="description" content="A nice and wonderful redirect to my main website (harys.is-a.dev) with prefetching.">
+    <link rel="icon" href="https://cdn.harys.is-a.dev/avatars/main.png" type="image/x-icon">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="harys722">
+    <meta itemprop="description" content="A nice and wonderful redirect to my main website (harys.is-a.dev) with prefetching.">
+    <meta itemprop="image" content="https://cdn.harys.is-a.dev/avatars/main.png">
+    
+    <!-- Discord Meta Tags -->
+    <meta name="theme-color" content="#FFD700" />
+    <meta property="og:title" content="Preparing Your Journey..." />
+    <meta property="og:description" content="A nice and wonderful redirect to my main website (harys.is-a.dev) with prefetching." />
+    <meta property="og:image" content="https://cdn.harys.is-a.dev/avatars/main.png" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://harys.is-a.dev">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Preparing Your Journey...">
+    <meta property="og:description" content="A nice and wonderful redirect to my main website (harys.is-a.dev) with prefetching.">
+    <meta property="og:image" content="https://cdn.harys.is-a.dev/avatars/main.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Preparing Your Journey...">
+    <meta name="twitter:description" content="A nice and wonderful redirect to my main website (harys.is-a.dev) with prefetching.">
+    <meta name="twitter:image" content="https://cdn.harys.is-a.dev/avatars/main.png">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(ellipse at center, #2d1b0e 0%, #1a0f07 70%, #0f0603 100%);
+  }
+
+  /* Animated starfield background */
+  .starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+  }
+
+  .star {
+    position: absolute;
+    background: linear-gradient(45deg, #ffd700, #ffaa00);
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.3); }
+  }
+
+  /* Floating particles */
+  .particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    background: linear-gradient(45deg, #ffd700, #ff8c00, #ffaa00);
+    border-radius: 50%;
+    animation: float 15s infinite linear;
+    filter: blur(1px);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Main container with glassmorphism */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px 40px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+    animation: containerGlow 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes containerGlow {
+    0% { box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3), 0 0 0 rgba(255, 215, 0, 0); }
+    100% { box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.3); }
+  }
+
+  /* Advanced loader with multiple orbits */
+  .loader {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+
+  /* Central energy core */
+  .energy-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #ffd700 0%, #ff8c00 50%, #cc6600 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: energyPulse 2s infinite ease-in-out;
+    box-shadow: 
+      0 0 30px rgba(255, 215, 0, 0.9),
+      0 0 60px rgba(255, 140, 0, 0.5),
+      inset 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .energy-core::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, transparent 40%, rgba(255, 215, 0, 0.15) 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: energyRing 3s infinite ease-in-out;
+  }
+
+  @keyframes energyPulse {
+    0%, 100% { 
+      transform: translate(-50%, -50%) scale(1);
+      box-shadow: 
+        0 0 30px rgba(255, 215, 0, 0.9),
+        0 0 60px rgba(255, 140, 0, 0.5),
+        inset 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    50% { 
+      transform: translate(-50%, -50%) scale(1.1);
+      box-shadow: 
+        0 0 50px rgba(255, 215, 0, 1),
+        0 0 100px rgba(255, 140, 0, 0.7),
+        inset 0 0 30px rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  @keyframes energyRing {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.3; }
+  }
+
+  /* Multiple orbital rings */
+  .orbit-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.4), rgba(255, 140, 0, 0.4)) border-box;
+    background-clip: padding-box;
+    animation: rotateRing linear infinite;
+  }
+
+  .orbit-ring-1 {
+    width: 180px;
+    height: 180px;
+    margin: -90px 0 0 -90px;
+    animation-duration: 8s;
+    border-image: linear-gradient(45deg, rgba(255, 215, 0, 0.6), rgba(255, 140, 0, 0.6)) 1;
+  }
+
+  .orbit-ring-2 {
+    width: 220px;
+    height: 220px;
+    margin: -110px 0 0 -110px;
+    animation-duration: 12s;
+    animation-direction: reverse;
+    border-image: linear-gradient(45deg, rgba(255, 140, 0, 0.5), rgba(255, 165, 0, 0.5)) 1;
+  }
+
+  .orbit-ring-3 {
+    width: 260px;
+    height: 260px;
+    margin: -130px 0 0 -130px;
+    animation-duration: 16s;
+    border-image: linear-gradient(45deg, rgba(255, 165, 0, 0.4), rgba(255, 193, 7, 0.4)) 1;
+  }
+
+  @keyframes rotateRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Orbiting energy nodes */
+  .orbit-node {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px currentColor;
+  }
+
+  .node-1 {
+    top: 50%;
+    left: 50%;
+    color: #ffd700;
+    background: #ffd700;
+    transform: translateX(90px) translateY(-50%);
+    animation: orbitNode 8s linear infinite;
+  }
+
+  .node-2 {
+    top: 50%;
+    left: 50%;
+    color: #ff8c00;
+    background: #ff8c00;
+    transform: translateX(110px) translateY(-50%);
+    animation: orbitNode 12s linear infinite reverse;
+  }
+
+  .node-3 {
+    top: 50%;
+    left: 50%;
+    color: #ffaa00;
+    background: #ffaa00;
+    transform: translateX(130px) translateY(-50%);
+    animation: orbitNode 16s linear infinite;
+  }
+
+  @keyframes orbitNode {
+    from { transform: translateX(var(--radius, 90px)) translateY(-50%) rotate(0deg); }
+    to { transform: translateX(var(--radius, 90px)) translateY(-50%) rotate(360deg); }
+  }
+
+  /* Holographic text effects */
+  .message {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #ffd700, #ff8c00, #ffaa00, #ffc107);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographicShimmer 4s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+    position: relative;
+  }
+
+  .message::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #ffd700, #ff8c00, #ffaa00, #ffc107);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographicShimmer 4s ease-in-out infinite 0.1s;
+    filter: blur(2px);
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+  @keyframes holographicShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 50% 100%; }
+    75% { background-position: 100% 0%; }
+  }
+
+  /* Futuristic info panel */
+  .info-panel {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 140, 0, 0.15));
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 20px;
+    padding: 25px 35px;
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+    animation: infoPanelGlow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes infoPanelGlow {
+    0% { 
+      border-color: rgba(255, 215, 0, 0.4);
+      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+    }
+    100% { 
+      border-color: rgba(255, 140, 0, 0.5);
+      box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);
+    }
+  }
+
+  .info-item {
+    margin: 8px 0;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+
+  .info-item strong {
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+  }
+
+  .timezone-info {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-top: 10px;
+  }
+
+  /* Progress bar */
+  .progress-container {
+    width: 300px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 30px 0 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #fff8e1, #f57f17);
+    border-radius: 10px;
+    width: 0%;
+    animation: progressFill 7s ease-out forwards;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  }
+
+  @keyframes progressFill {
+    to { width: 100%; }
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 40px 25px;
+      margin: 20px;
+    }
+    
+    .loader {
+      width: 250px;
+      height: 250px;
+    }
+    
+    .energy-core {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .orbit-ring-1 { width: 150px; height: 150px; margin: -75px 0 0 -75px; }
+    .orbit-ring-2 { width: 180px; height: 180px; margin: -90px 0 0 -90px; }
+    .orbit-ring-3 { width: 210px; height: 210px; margin: -105px 0 0 -105px; }
+    
+    .message {
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+    
+    .progress-container {
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 30px 20px;
+    }
+    
+    .loader {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .message {
+      font-size: 18px;
+    }
+    
+    .info-panel {
+      padding: 20px 25px;
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Animated starfield -->
+<div class="starfield" id="starfield"></div>
+
+<!-- Floating particles -->
+<div class="particles" id="particles"></div>
+
+<div class="container">
+  <div class="loader">
+    <!-- Energy core -->
+    <div class="energy-core"></div>
+    
+    <!-- Orbital rings -->
+    <div class="orbit-ring orbit-ring-1"></div>
+    <div class="orbit-ring orbit-ring-2"></div>
+    <div class="orbit-ring orbit-ring-3"></div>
+    
+    <!-- Orbiting nodes -->
+    <div class="orbit-node node-1"></div>
+    <div class="orbit-node node-2"></div>
+    <div class="orbit-node node-3"></div>
+  </div>
+  
+  <div class="message" data-text="Initializing Quantum Experience...">
+    Initializing Quantum Experience...
+  </div>
+  
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
+  
+  <div class="info-panel">
+    <div class="info-item" id="current-time"></div>
+    <div class="info-item" id="visit-count"></div>
+    <div class="timezone-info" id="timezone-info"></div>
+  </div>
+</div>
+
+<script>
+  // Create animated starfield
+  function createStarfield() {
+    const starfield = document.getElementById('starfield');
+    const starCount = 100;
+    
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.width = star.style.height = Math.random() * 3 + 1 + 'px';
+      star.style.animationDelay = Math.random() * 3 + 's';
+      starfield.appendChild(star);
+    }
+  }
+
+  // Create floating particles
+  function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 20;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.width = particle.style.height = Math.random() * 4 + 2 + 'px';
+      particle.style.animationDelay = Math.random() * 15 + 's';
+      particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+      particlesContainer.appendChild(particle);
+    }
+  }
+
+  // Visit counter with memory storage
+  const visitsKey = 'quantumVisitorCount';
+  let count = JSON.parse(localStorage.getItem(visitsKey) || '0') + 1;
+  localStorage.setItem(visitsKey, JSON.stringify(count));
+
+  // Get timezone information
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const date = new Date();
+  const offsetMinutes = date.getTimezoneOffset();
+  const offsetSign = offsetMinutes <= 0 ? '+' : '-';
+  const absOffsetMinutes = Math.abs(offsetMinutes);
+  const offsetHours = String(Math.floor(absOffsetMinutes / 60)).padStart(2, '0');
+  const offsetMins = String(absOffsetMinutes % 60).padStart(2, '0');
+  const offsetFormatted = `${offsetSign}${offsetHours}:${offsetMins}`;
+
+  // Update display information
+  function updateInfo() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString([], { 
+      hour: '2-digit', 
+      minute: '2-digit', 
+      second: '2-digit',
+      hour12: false
+    });
+    
+    document.getElementById('current-time').innerHTML = 
+      `🕐 Local Time: <strong>${timeString}</strong>`;
+    document.getElementById('visit-count').innerHTML = 
+      `👁️ Quantum Visits: <strong>${count}</strong>`;
+    document.getElementById('timezone-info').innerHTML = 
+      `🌍 ${timeZone} (UTC${offsetFormatted})`;
+  }
+
+  // Initialize everything
+  createStarfield();
+  createParticles();
+  updateInfo();
+  
+  // Update time every second
+  setInterval(updateInfo, 1000);
+
+  // Redirect after animation completes
+  setTimeout(() => {
+    // Add fade out effect before redirect
+    document.body.style.transition = 'opacity 0.5s ease-out';
+    document.body.style.opacity = '0';
+    
+    setTimeout(() => {
+      window.location.href = "https://harys.is-a.dev/";
+    }, 500);
+  }, 7000);
+
+  // Add mouse interaction effects
+  document.addEventListener('mousemove', (e) => {
+    const container = document.querySelector('.container');
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    
+    container.style.transform = `perspective(1000px) rotateY(${x * 0.05}deg) rotateX(${-y * 0.05}deg)`;
+  });
+
+  document.addEventListener('mouseleave', () => {
+    const container = document.querySelector('.container');
+    container.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+  });
+</script>
+
+</body>
+</html>
