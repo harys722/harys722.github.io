@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- HTML Meta Tags -->
-    <title>Preparing Your Journey...</title>
-    <meta name="description" content="A nice and wonderful redirect to my main website (harys.is-a.dev) with prefetching.">
+    <title>404 - Page Not Found</title>
+    <meta name="description" content="Oops! The page you are looking for doesn't exist. However, you can view my all websites links here.">
     <link rel="icon" href="https://cdn.harys.is-a.dev/avatars/main.png" type="image/x-icon">
 
     <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="harys722">
-    <meta itemprop="description" content="A nice and wonderful redirect to my main website (harys.is-a.dev) with prefetching.">
+    <meta itemprop="name" content="404 - Page Not Found">
+    <meta itemprop="description" content="Oops! The page you are looking for doesn't exist. However, you can view my all websites links here.">
     <meta itemprop="image" content="https://cdn.harys.is-a.dev/avatars/main.png">
     
     <!-- Discord Meta Tags -->
-    <meta name="theme-color" content="#FFD700" />
-    <meta property="og:title" content="Preparing Your Journey..." />
-    <meta property="og:description" content="A nice and wonderful redirect to my main website (harys.is-a.dev) with prefetching." />
+    <meta name="theme-color" content="#FF4444" />
+    <meta property="og:title" content="404 - Page Not Found" />
+    <meta property="og:description" content="Oops! The page you are looking for doesn't exist. However, you can view my all websites links here." />
     <meta property="og:image" content="https://cdn.harys.is-a.dev/avatars/main.png" />
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://harys.is-a.dev">
+    <meta property="og:url" content="https://harys722.github.io/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Preparing Your Journey...">
-    <meta property="og:description" content="A nice and wonderful redirect to my main website (harys.is-a.dev) with prefetching.">
+    <meta property="og:title" content="404 - Page Not Found">
+    <meta property="og:description" content="Oops! The page you are looking for doesn't exist. However, you can view my all websites links here.">
     <meta property="og:image" content="https://cdn.harys.is-a.dev/avatars/main.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Preparing Your Journey...">
-    <meta name="twitter:description" content="A nice and wonderful redirect to my main website (harys.is-a.dev) with prefetching.">
+    <meta name="twitter:title" content="404 - Page Not Found">
+    <meta name="twitter:description" content="Oops! The page you are looking for doesn't exist. However, you can view my all websites links here.">
     <meta name="twitter:image" content="https://cdn.harys.is-a.dev/avatars/main.png">
 
 <style>
@@ -47,9 +47,9 @@
     align-items: center;
     justify-content: center;
     font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
-    background: radial-gradient(ellipse at center, #2d1b0e 0%, #1a0f07 70%, #0f0603 100%);
+    background: radial-gradient(ellipse at center, #2d0e0e 0%, #1a0707 70%, #0f0303 100%);
   }
 
   /* Animated starfield background */
@@ -64,7 +64,7 @@
 
   .star {
     position: absolute;
-    background: linear-gradient(45deg, #ffd700, #ffaa00);
+    background: linear-gradient(45deg, #ff4444, #ff6666);
     border-radius: 50%;
     animation: twinkle 3s infinite ease-in-out;
   }
@@ -87,11 +87,11 @@
 
   .particle {
     position: absolute;
-    background: linear-gradient(45deg, #ffd700, #ff8c00, #ffaa00);
+    background: linear-gradient(45deg, #ff4444, #ff6666, #ff8888);
     border-radius: 50%;
     animation: float 15s infinite linear;
     filter: blur(1px);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.6);
   }
 
   @keyframes float {
@@ -123,35 +123,71 @@
     padding: 60px 40px;
     box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
     animation: containerGlow 4s ease-in-out infinite alternate;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
   }
 
   @keyframes containerGlow {
-    0% { box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3), 0 0 0 rgba(255, 215, 0, 0); }
-    100% { box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.3); }
+    0% { box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3), 0 0 0 rgba(255, 68, 68, 0); }
+    100% { box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3), 0 0 60px rgba(255, 68, 68, 0.3); }
   }
 
-  /* Advanced loader with multiple orbits */
+  /* 404 Error display */
+  .error-code {
+    font-size: 120px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff4444, #ff6666, #ff8888, #ffaaaa);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographicShimmer 4s ease-in-out infinite;
+    text-shadow: 0 0 50px rgba(255, 68, 68, 0.8);
+    position: relative;
+  }
+
+  .error-code::before {
+    content: '404';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #ff4444, #ff6666, #ff8888, #ffaaaa);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographicShimmer 4s ease-in-out infinite 0.1s;
+    filter: blur(3px);
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  /* Advanced loader with multiple orbits - modified for error state */
   .loader {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 40px;
   }
 
-  /* Central energy core */
+  /* Central energy core - error state */
   .energy-core {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80px;
-    height: 80px;
-    background: radial-gradient(circle, #ffd700 0%, #ff8c00 50%, #cc6600 100%);
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #ff4444 0%, #cc0000 50%, #990000 100%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    animation: energyPulse 2s infinite ease-in-out;
+    animation: errorPulse 2s infinite ease-in-out;
     box-shadow: 
-      0 0 30px rgba(255, 215, 0, 0.9),
-      0 0 60px rgba(255, 140, 0, 0.5),
+      0 0 30px rgba(255, 68, 68, 0.9),
+      0 0 60px rgba(255, 68, 68, 0.5),
       inset 0 0 20px rgba(255, 255, 255, 0.3);
   }
 
@@ -162,131 +198,83 @@
     left: 50%;
     width: 120%;
     height: 120%;
-    background: radial-gradient(circle, transparent 40%, rgba(255, 215, 0, 0.15) 70%);
+    background: radial-gradient(circle, transparent 40%, rgba(255, 68, 68, 0.15) 70%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    animation: energyRing 3s infinite ease-in-out;
+    animation: errorRing 3s infinite ease-in-out;
   }
 
-  @keyframes energyPulse {
+  @keyframes errorPulse {
     0%, 100% { 
       transform: translate(-50%, -50%) scale(1);
       box-shadow: 
-        0 0 30px rgba(255, 215, 0, 0.9),
-        0 0 60px rgba(255, 140, 0, 0.5),
+        0 0 30px rgba(255, 68, 68, 0.9),
+        0 0 60px rgba(255, 68, 68, 0.5),
         inset 0 0 20px rgba(255, 255, 255, 0.3);
     }
     50% { 
-      transform: translate(-50%, -50%) scale(1.1);
+      transform: translate(-50%, -50%) scale(1.2);
       box-shadow: 
-        0 0 50px rgba(255, 215, 0, 1),
-        0 0 100px rgba(255, 140, 0, 0.7),
+        0 0 50px rgba(255, 68, 68, 1),
+        0 0 100px rgba(255, 68, 68, 0.7),
         inset 0 0 30px rgba(255, 255, 255, 0.4);
     }
   }
 
-  @keyframes energyRing {
+  @keyframes errorRing {
     0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
-    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.3; }
+    50% { transform: translate(-50%, -50%) scale(1.8); opacity: 0.2; }
   }
 
-  /* Multiple orbital rings */
+  /* Broken orbital rings */
   .orbit-ring {
     position: absolute;
     top: 50%;
     left: 50%;
     border-radius: 50%;
-    border: 2px solid transparent;
-    background: linear-gradient(45deg, rgba(255, 215, 0, 0.4), rgba(255, 140, 0, 0.4)) border-box;
-    background-clip: padding-box;
-    animation: rotateRing linear infinite;
+    border: 2px dashed rgba(255, 68, 68, 0.6);
+    animation: brokenRotate linear infinite;
   }
 
   .orbit-ring-1 {
-    width: 180px;
-    height: 180px;
-    margin: -90px 0 0 -90px;
-    animation-duration: 8s;
-    border-image: linear-gradient(45deg, rgba(255, 215, 0, 0.6), rgba(255, 140, 0, 0.6)) 1;
+    width: 120px;
+    height: 120px;
+    margin: -60px 0 0 -60px;
+    animation-duration: 12s;
+    border-style: dotted;
   }
 
   .orbit-ring-2 {
-    width: 220px;
-    height: 220px;
-    margin: -110px 0 0 -110px;
-    animation-duration: 12s;
+    width: 160px;
+    height: 160px;
+    margin: -80px 0 0 -80px;
+    animation-duration: 18s;
     animation-direction: reverse;
-    border-image: linear-gradient(45deg, rgba(255, 140, 0, 0.5), rgba(255, 165, 0, 0.5)) 1;
+    border-style: dashed;
   }
 
-  .orbit-ring-3 {
-    width: 260px;
-    height: 260px;
-    margin: -130px 0 0 -130px;
-    animation-duration: 16s;
-    border-image: linear-gradient(45deg, rgba(255, 165, 0, 0.4), rgba(255, 193, 7, 0.4)) 1;
-  }
-
-  @keyframes rotateRing {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-
-  /* Orbiting energy nodes */
-  .orbit-node {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    box-shadow: 0 0 15px currentColor;
-  }
-
-  .node-1 {
-    top: 50%;
-    left: 50%;
-    color: #ffd700;
-    background: #ffd700;
-    transform: translateX(90px) translateY(-50%);
-    animation: orbitNode 8s linear infinite;
-  }
-
-  .node-2 {
-    top: 50%;
-    left: 50%;
-    color: #ff8c00;
-    background: #ff8c00;
-    transform: translateX(110px) translateY(-50%);
-    animation: orbitNode 12s linear infinite reverse;
-  }
-
-  .node-3 {
-    top: 50%;
-    left: 50%;
-    color: #ffaa00;
-    background: #ffaa00;
-    transform: translateX(130px) translateY(-50%);
-    animation: orbitNode 16s linear infinite;
-  }
-
-  @keyframes orbitNode {
-    from { transform: translateX(var(--radius, 90px)) translateY(-50%) rotate(0deg); }
-    to { transform: translateX(var(--radius, 90px)) translateY(-50%) rotate(360deg); }
+  @keyframes brokenRotate {
+    0% { transform: rotate(0deg); opacity: 0.6; }
+    25% { opacity: 0.3; }
+    50% { transform: rotate(180deg); opacity: 0.8; }
+    75% { opacity: 0.2; }
+    100% { transform: rotate(360deg); opacity: 0.6; }
   }
 
   /* Holographic text effects */
   .message {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     letter-spacing: 2px;
     text-align: center;
-    margin-bottom: 30px;
-    background: linear-gradient(45deg, #ffd700, #ff8c00, #ffaa00, #ffc107);
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff4444, #ff6666, #ff8888, #ffaaaa);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: holographicShimmer 4s ease-in-out infinite;
-    text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+    text-shadow: 0 0 30px rgba(255, 68, 68, 0.6);
     position: relative;
   }
 
@@ -295,7 +283,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(45deg, #ffd700, #ff8c00, #ffaa00, #ffc107);
+    background: linear-gradient(45deg, #ff4444, #ff6666, #ff8888, #ffaaaa);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -306,6 +294,15 @@
     z-index: -1;
   }
 
+  .subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+
   @keyframes holographicShimmer {
     0%, 100% { background-position: 0% 50%; }
     25% { background-position: 100% 50%; }
@@ -313,28 +310,155 @@
     75% { background-position: 100% 0%; }
   }
 
+  /* Websites section */
+  .websites-section {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .websites-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 25px;
+    background: linear-gradient(45deg, #ff4444, #ff6666, #ff8888, #ffaaaa);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographicShimmer 4s ease-in-out infinite;
+    text-shadow: 0 0 20px rgba(255, 68, 68, 0.6);
+  }
+
+  .websites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .website-card {
+    background: linear-gradient(135deg, rgba(255, 68, 68, 0.15), rgba(255, 102, 102, 0.15));
+    border: 1px solid rgba(255, 68, 68, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+
+  .website-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .website-card:hover::before {
+    left: 100%;
+  }
+
+  .website-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 68, 68, 0.8);
+    box-shadow: 0 15px 40px rgba(255, 68, 68, 0.4);
+  }
+
+  .website-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: linear-gradient(45deg, #ff6666, #ff8888, #ffaaaa);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographicShimmer 4s ease-in-out infinite;
+  }
+
+  .website-description {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.4;
+  }
+
+  /* Navigation buttons */
+  .nav-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-button {
+    background: linear-gradient(135deg, rgba(255, 68, 68, 0.2), rgba(255, 102, 102, 0.2));
+    border: 2px solid rgba(255, 68, 68, 0.5);
+    border-radius: 15px;
+    padding: 12px 24px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .nav-button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 68, 68, 0.8);
+    box-shadow: 0 10px 30px rgba(255, 68, 68, 0.4);
+  }
+
+  .nav-button:hover::before {
+    left: 100%;
+  }
+
   /* Futuristic info panel */
   .info-panel {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 140, 0, 0.15));
-    border: 1px solid rgba(255, 215, 0, 0.4);
+    background: linear-gradient(135deg, rgba(255, 68, 68, 0.15), rgba(255, 102, 102, 0.15));
+    border: 1px solid rgba(255, 68, 68, 0.4);
     border-radius: 20px;
     padding: 25px 35px;
     backdrop-filter: blur(10px);
     color: #ffffff;
     font-size: 16px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 68, 68, 0.3);
     animation: infoPanelGlow 3s ease-in-out infinite alternate;
+    margin-top: 20px;
   }
 
   @keyframes infoPanelGlow {
     0% { 
-      border-color: rgba(255, 215, 0, 0.4);
-      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+      border-color: rgba(255, 68, 68, 0.4);
+      box-shadow: 0 10px 30px rgba(255, 68, 68, 0.3);
     }
     100% { 
-      border-color: rgba(255, 140, 0, 0.5);
-      box-shadow: 0 10px 30px rgba(255, 140, 0, 0.4);
+      border-color: rgba(255, 102, 102, 0.5);
+      box-shadow: 0 10px 30px rgba(255, 102, 102, 0.4);
     }
   }
 
@@ -345,38 +469,8 @@
   }
 
   .info-item strong {
-    color: #00d4ff;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
-  }
-
-  .timezone-info {
-    font-size: 14px;
-    opacity: 0.7;
-    margin-top: 10px;
-  }
-
-  /* Progress bar */
-  .progress-container {
-    width: 300px;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin: 30px 0 20px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, #fff8e1, #f57f17);
-    border-radius: 10px;
-    width: 0%;
-    animation: progressFill 7s ease-out forwards;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
-  }
-
-  @keyframes progressFill {
-    to { width: 100%; }
+    color: #ff6b6b;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
   }
 
   /* Responsive design */
@@ -386,27 +480,41 @@
       margin: 20px;
     }
     
+    .error-code {
+      font-size: 80px;
+      letter-spacing: 5px;
+    }
+    
     .loader {
-      width: 250px;
-      height: 250px;
+      width: 150px;
+      height: 150px;
     }
     
     .energy-core {
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
     }
     
-    .orbit-ring-1 { width: 150px; height: 150px; margin: -75px 0 0 -75px; }
-    .orbit-ring-2 { width: 180px; height: 180px; margin: -90px 0 0 -90px; }
-    .orbit-ring-3 { width: 210px; height: 210px; margin: -105px 0 0 -105px; }
+    .orbit-ring-1 { width: 90px; height: 90px; margin: -45px 0 0 -45px; }
+    .orbit-ring-2 { width: 120px; height: 120px; margin: -60px 0 0 -60px; }
     
     .message {
-      font-size: 22px;
+      font-size: 20px;
       letter-spacing: 1px;
     }
     
-    .progress-container {
-      width: 250px;
+    .websites-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .nav-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .nav-button {
+      width: 200px;
+      text-align: center;
     }
   }
 
@@ -415,9 +523,13 @@
       padding: 30px 20px;
     }
     
+    .error-code {
+      font-size: 60px;
+    }
+    
     .loader {
-      width: 200px;
-      height: 200px;
+      width: 120px;
+      height: 120px;
     }
     
     .message {
@@ -440,37 +552,80 @@
 <div class="particles" id="particles"></div>
 
 <div class="container">
+  <div class="error-code">404</div>
+  
   <div class="loader">
     <!-- Energy core -->
     <div class="energy-core"></div>
     
-    <!-- Orbital rings -->
+    <!-- Broken orbital rings -->
     <div class="orbit-ring orbit-ring-1"></div>
     <div class="orbit-ring orbit-ring-2"></div>
-    <div class="orbit-ring orbit-ring-3"></div>
-    
-    <!-- Orbiting nodes -->
-    <div class="orbit-node node-1"></div>
-    <div class="orbit-node node-2"></div>
-    <div class="orbit-node node-3"></div>
   </div>
   
-  <div class="message" data-text="Initializing Quantum Experience...">
-    Initializing Quantum Experience...
+  <div class="message" data-text="Page Not Found">
+    Page Not Found
   </div>
   
-  <div class="progress-container">
-    <div class="progress-bar"></div>
+  <div class="subtitle">
+    This page doesn't exist, but you can explore my other quantum realms below.<br>
+    Each link opens in a new dimension (tab).
+  </div>
+  
+  <div class="websites-section">
+    <div class="websites-title">🌐 Explore My Other Websites</div>
+    <div class="websites-grid" id="websitesGrid">
+      <!-- Website cards will be populated by JavaScript -->
+    </div>
+  </div>
+  
+  <div class="nav-buttons">
+    <a href="/" class="nav-button">🏠 Return to Home</a>
+    <a href="javascript:history.back()" class="nav-button">⏪ Go Back</a>
   </div>
   
   <div class="info-panel">
+    <div class="info-item">⚠️ <strong>Error Code:</strong> 404_NOT_FOUND</div>
+    <div class="info-item">🔍 <strong>Status:</strong> Page Not Found</div>
     <div class="info-item" id="current-time"></div>
-    <div class="info-item" id="visit-count"></div>
-    <div class="timezone-info" id="timezone-info"></div>
   </div>
 </div>
 
 <script>
+  // Array of your websites - you can easily add/remove websites here
+  const websites = [
+    {
+      name: "Website",
+      url: "https://harys.is-a.dev/",
+      description: "My personal website and projects showcase."
+    },
+    {
+      name: "Free Domains",
+      url: "/free-domains",
+      description: "A curated collection of free domains that can be used in personal websites & projects."
+    },
+    {
+      name: "Open API",
+      url: "/open-api", 
+      description: "A free Open API service that provides a variety of endpoints that you can use in your applications."
+    },
+    {
+      name: "GitHub Guides",
+      url: "/github-guides",
+      description: "Learn more about GitHub & GitHub pages as a developer."
+    },
+    {
+      name: "is-a.dev Prototype",
+      url: "/is-a-dev-prototype",
+      description: "A prototype of 'is-a.dev' which is a completely free subdomains service."
+    },
+    {
+      name: "No One Is A Dev",
+      url: "/no-one-is-a-dev",
+      description: "Welcome to the world where developers don't exist, yet somehow this website was built."
+    }
+  ];
+
   // Create animated starfield
   function createStarfield() {
     const starfield = document.getElementById('starfield');
@@ -490,7 +645,7 @@
   // Create floating particles
   function createParticles() {
     const particlesContainer = document.getElementById('particles');
-    const particleCount = 20;
+    const particleCount = 15;
     
     for (let i = 0; i < particleCount; i++) {
       const particle = document.createElement('div');
@@ -503,23 +658,28 @@
     }
   }
 
-  // Visit counter with memory storage
-  const visitsKey = 'quantumVisitorCount';
-  let count = JSON.parse(localStorage.getItem(visitsKey) || '0') + 1;
-  localStorage.setItem(visitsKey, JSON.stringify(count));
+  // Function to create website cards
+  function createWebsiteCards() {
+    const grid = document.getElementById('websitesGrid');
+    
+    websites.forEach(website => {
+      const card = document.createElement('a');
+      card.className = 'website-card';
+      card.href = website.url;
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
+      
+      card.innerHTML = `
+        <div class="website-name">${website.name}</div>
+        <div class="website-description">${website.description}</div>
+      `;
+      
+      grid.appendChild(card);
+    });
+  }
 
-  // Get timezone information
-  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const date = new Date();
-  const offsetMinutes = date.getTimezoneOffset();
-  const offsetSign = offsetMinutes <= 0 ? '+' : '-';
-  const absOffsetMinutes = Math.abs(offsetMinutes);
-  const offsetHours = String(Math.floor(absOffsetMinutes / 60)).padStart(2, '0');
-  const offsetMins = String(absOffsetMinutes % 60).padStart(2, '0');
-  const offsetFormatted = `${offsetSign}${offsetHours}:${offsetMins}`;
-
-  // Update display information
-  function updateInfo() {
+  // Update time display
+  function updateTime() {
     const now = new Date();
     const timeString = now.toLocaleTimeString([], { 
       hour: '2-digit', 
@@ -529,31 +689,17 @@
     });
     
     document.getElementById('current-time').innerHTML = 
-      `🕐 Local Time: <strong>${timeString}</strong>`;
-    document.getElementById('visit-count').innerHTML = 
-      `👁️ Quantum Visits: <strong>${count}</strong>`;
-    document.getElementById('timezone-info').innerHTML = 
-      `🌍 ${timeZone} (UTC${offsetFormatted})`;
+      `🕐 <strong>Your Local Time:</strong> ${timeString}`;
   }
 
   // Initialize everything
   createStarfield();
   createParticles();
-  updateInfo();
+  createWebsiteCards();
+  updateTime();
   
   // Update time every second
-  setInterval(updateInfo, 1000);
-
-  // Redirect after animation completes
-  setTimeout(() => {
-    // Add fade out effect before redirect
-    document.body.style.transition = 'opacity 0.5s ease-out';
-    document.body.style.opacity = '0';
-    
-    setTimeout(() => {
-      window.location.href = "https://harys.is-a.dev/";
-    }, 500);
-  }, 7000);
+  setInterval(updateTime, 1000);
 
   // Add mouse interaction effects
   document.addEventListener('mousemove', (e) => {
@@ -569,6 +715,11 @@
     const container = document.querySelector('.container');
     container.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
   });
+
+  // Add glitch effect on page load
+  setTimeout(() => {
+    document.querySelector('.error-code').style.animation += ', glitch 0.5s ease-in-out';
+  }, 1000);
 </script>
 
 </body>
